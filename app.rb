@@ -10,9 +10,9 @@ end
 module Citibike
 	class App < Sinatra::Application
     get '/' do
-      data = File.open("data/citibikenyc.json").read
-      @data = MultiJson.decode(data)
-      puts @data
+      json = File.open("data/citibikenyc.json").read
+      @data = MultiJson.decode(json)
+      erb :home
     end
 	end
 end

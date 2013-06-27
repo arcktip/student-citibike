@@ -1,0 +1,5 @@
+<ol>
+  <% @data.each do |station| %>
+    <li><%= station["name"] %> - <%= station["free"] %> free</li>
+  <% end %>
+</ol>
