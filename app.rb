@@ -17,7 +17,7 @@ module Citibike
 
     get '/map' do
       json = File.open("data/citibikenyc.json").read
-      @data = MultiJson.decode(json).sort_by{|station| station["free"]}.reverse
+      @data = MultiJson.decode(json)
       erb :map
     end
 
