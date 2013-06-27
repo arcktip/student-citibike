@@ -14,5 +14,9 @@ module Citibike
       @data = MultiJson.decode(json)
       erb :home
     end
-	end
+
+    get '/map' do
+      erb :map
+    end
+  end
 end
