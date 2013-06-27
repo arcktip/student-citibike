@@ -1,13 +1,18 @@
-<html>
+<h1>MAP MY BIKE ROUTE</h1>
 <p>Where are you going?</p>
-<form action="/form" method="post">  
-  <input type="text" name="whereto">  
-  <input type="submit">  
-</form> 
+<form action="/map" method="post">  
+  <select name="start">
+    <% @data.each do |station| %>
+      <option value="<%= [station["lat"].to_f / 1000000,station["lng"].to_f / 1000000] %>"><%= station["name"] %></option>
+    <% end %>
+  </select>  
 
-<p>Where are you coming from?</p>
-<form action="/form" method="post">  
-  <input type="text" name="wherefrom">  
-  <input type="submit">  
+  <p>Where are you coming from?</p>
+  <form action="/form" method="post">  
+    <select name="end">
+      <% @data.each do |station| %>
+        <option value="<%= [station["lat"].to_f / 1000000,station["lng"].to_f / 1000000] %>"><%= station["name"] %></option>
+      <% end %>  
+    <select>
+    <input type="submit">  
 </form> 
-</html>
