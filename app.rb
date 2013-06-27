@@ -18,5 +18,14 @@ module Citibike
     get '/map' do
       erb :map
     end
+
+    get '/form' do
+      erb :form
+    end
+
+    post '/form' do
+      "Hello World"
+    end
+
   end
 end
