@@ -11,13 +11,13 @@ module Citibike
 	class App < Sinatra::Application
     get '/' do
       json = File.open("data/citibikenyc.json").read
-      @data = MultiJson.decode(json).sort_by{|station| station["free"]}.reverse
+      @data = MultiJson.load(json).sort_by{|station| station["free"]}.reverse
       erb :home
     end
 
     get '/map' do
       json = File.open("data/citibikenyc.json").read
-      @data = MultiJson.decode(json)
+      @data = MultiJson.load(json)
       erb :map
     end
 

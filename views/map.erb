@@ -12,7 +12,7 @@
 
   <% @data.each do |station| %>
     // what should I divide by? not a million I guess
-    L.marker([<%= station["lat"] / 1000000 %>, <%= station["lng"] / 1000000 %>]).addTo(map);
+    L.marker([<%= station["lat"].to_f / 1000000 %>, <%= station["lng"].to_f / 1000000 %>]).addTo(map);
   <% end %>
 
 
