@@ -9,7 +9,11 @@
 
 ## data sets
 
+### bikes
 * `data/citibikenyc.json` is from <http://api.citybik.es/citibikenyc.json> which is a snapshot of stations info
+
+### other
+* `subway_entrances.json` is from <https://nycopendata.socrata.com/Transportation/Subway-Entrances/drex-xx56>
 
 ## da map
 
