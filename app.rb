@@ -25,9 +25,9 @@ module Citibike
       erb :form
     end
 
-    post '/form' do
-      "Hello World"
-    end
+    post '/form' do  
+      "Thanks for your thoughts on our first JSON site! '#{params[:message]}'"  
+    end  
 
   end
 end
