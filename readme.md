@@ -23,3 +23,5 @@
 var marker = L.marker([latitude, longitude]).addTo(map);
 ```
 where latitude and longitude are the actual values from the json
+
+HINT: you can embed ruby in javascript.
