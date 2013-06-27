@@ -6,4 +6,14 @@
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
     maxZoom: 18
   }).addTo(map);
+  // L.marker([40683826, -73976323]).addTo(map);
+  // L.marker([51.5, -0.09]).addTo(map);
+  // what is up with these numbers ??
+
+  <% @data.each do |station| %>
+    // what should I divide by? not a million I guess
+    L.marker([<%= station["lat"] / 1000000 %>, <%= station["lng"] / 1000000 %>]).addTo(map);
+  <% end %>
+
+
 </script>
